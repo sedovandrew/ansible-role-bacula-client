@@ -1,0 +1,30 @@
+#
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# !! Managed by Ansible role sedovandrew.bacula_client !!
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#
+# List Directors who are permitted to contact this File daemon
+#
+Director {
+  Name = {{ bacula_client_director }}
+  Password = "{{ bacula_client_password }}"
+}
+
+#
+# "Global" File daemon configuration specifications
+#
+FileDaemon {
+  Name = {{ bacula_client_name }}
+  FDport = {{ bacula_client_port }}
+  WorkingDirectory = {{ bacula_client_working_directory }}
+  Pid Directory = {{ bacula_client_pid_directory }}
+  Maximum Concurrent Jobs = {{ bacula_client_maximum_concurrent_jobs }}
+}
+
+#
+# Send all messages except skipped files back to Director
+#
+Messages {
+  Name = Standard
+  director = {{ bacula_client_director }} = all, !skipped, !restored
+}

@@ -1,0 +1,11 @@
+---
+bacula_client_version: 5.2.13
+
+bacula_client_director: bacula-dir
+bacula_client_password: "@@FD_PASSWORD@@"
+
+bacula_client_name: bacula-fd
+bacula_client_port: 9102
+bacula_client_working_directory: /var/spool/bacula
+bacula_client_pid_directory: /var/run
+bacula_client_maximum_concurrent_jobs: 20
