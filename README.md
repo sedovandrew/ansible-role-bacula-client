@@ -8,7 +8,7 @@ Install and configure Bacula Client.
 Role Variables
 --------------
 
-[variables](default/main.yml)
+[variables](https://github.com/sedovandrew/ansible-role-bacula-client/blob/master/defaults/main.yml)
 
 Example Playbook
 ----------------
